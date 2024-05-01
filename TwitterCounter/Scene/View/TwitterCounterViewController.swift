@@ -28,7 +28,7 @@ class TwitterCounterViewController: UIViewController {
     
     func updateCharacterCount() {
         let tweetText = tweetTextView.text ?? ""
-        let characterCount = tweetText.count
+        let characterCount = TwitterText.lengthOf(tweet: tweetText)
         let remainingCount = 280 - characterCount
         charactersTypedLabel.text = "\(characterCount)\\280"
         charactersRemainingLabel.text = "\(remainingCount)"
@@ -44,7 +44,10 @@ extension TwitterCounterViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let currentText = textView.text as NSString
         let newText = currentText.replacingCharacters(in: range, with: text)
-        return newText.count <= 280
+        if TwitterText.lengthOf(tweet: newText) > 280 {
+            return false
+        }
+        return true
     }
 }
 
