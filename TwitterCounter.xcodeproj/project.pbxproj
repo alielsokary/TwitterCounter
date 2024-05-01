@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		419FFCA62BE2DC8100992489 /* TwitterCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FFCA52BE2DC8100992489 /* TwitterCounterViewModel.swift */; };
 		41B4F7802BE2D75800816357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4F77F2BE2D75800816357 /* AppDelegate.swift */; };
 		41B4F7822BE2D75800816357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4F7812BE2D75800816357 /* SceneDelegate.swift */; };
-		41B4F7842BE2D75800816357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4F7832BE2D75800816357 /* ViewController.swift */; };
+		41B4F7842BE2D75800816357 /* TwitterCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4F7832BE2D75800816357 /* TwitterCounterViewController.swift */; };
 		41B4F7872BE2D75800816357 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 41B4F7862BE2D75800816357 /* Base */; };
 		41B4F7892BE2D75800816357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B4F7882BE2D75800816357 /* Assets.xcassets */; };
 		41B4F78C2BE2D75800816357 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 41B4F78B2BE2D75800816357 /* Base */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		419FFCA52BE2DC8100992489 /* TwitterCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCounterViewModel.swift; sourceTree = "<group>"; };
 		41B4F77C2BE2D75800816357 /* TwitterCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B4F77F2BE2D75800816357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B4F7812BE2D75800816357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		41B4F7832BE2D75800816357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41B4F7832BE2D75800816357 /* TwitterCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCounterViewController.swift; sourceTree = "<group>"; };
 		41B4F7862BE2D75800816357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41B4F7882BE2D75800816357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41B4F78B2BE2D75800816357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		419FFCA22BE2DC4200992489 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				419FFCA42BE2DC5700992489 /* View Model */,
+				419FFCA32BE2DC4E00992489 /* View */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		419FFCA32BE2DC4E00992489 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41B4F7832BE2D75800816357 /* TwitterCounterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		419FFCA42BE2DC5700992489 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				419FFCA52BE2DC8100992489 /* TwitterCounterViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		41B4F7732BE2D75800816357 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +126,9 @@
 		41B4F77E2BE2D75800816357 /* TwitterCounter */ = {
 			isa = PBXGroup;
 			children = (
+				419FFCA22BE2DC4200992489 /* Scene */,
 				41B4F77F2BE2D75800816357 /* AppDelegate.swift */,
 				41B4F7812BE2D75800816357 /* SceneDelegate.swift */,
-				41B4F7832BE2D75800816357 /* ViewController.swift */,
 				41B4F7852BE2D75800816357 /* Main.storyboard */,
 				41B4F7882BE2D75800816357 /* Assets.xcassets */,
 				41B4F78A2BE2D75800816357 /* LaunchScreen.storyboard */,
@@ -258,9 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41B4F7842BE2D75800816357 /* ViewController.swift in Sources */,
+				41B4F7842BE2D75800816357 /* TwitterCounterViewController.swift in Sources */,
 				41B4F7802BE2D75800816357 /* AppDelegate.swift in Sources */,
 				41B4F7822BE2D75800816357 /* SceneDelegate.swift in Sources */,
+				419FFCA62BE2DC8100992489 /* TwitterCounterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +475,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,8 +501,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
