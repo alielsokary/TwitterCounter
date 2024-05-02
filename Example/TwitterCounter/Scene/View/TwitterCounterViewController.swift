@@ -54,3 +54,20 @@ private extension TwitterCounterViewController {
     }
 }
 
+// MARK: - Actions
+
+private extension TwitterCounterViewController {
+
+    @IBAction func copyAction(_ sender: UIButton) {
+        guard let text = tweetTextView.text else { return }
+        UIPasteboard.general.string = text
+    }
+    
+    @IBAction func clearAction(_ sender: UIButton) {
+        tweetTextView.clearText()
+    }
+    
+    @IBAction func postTweetAction(_ sender: UIButton) {
+        
+    }
+}

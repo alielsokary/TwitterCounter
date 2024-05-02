@@ -641,7 +641,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alielsokary/TwitterCounter.git";
 			requirement = {
-				branch = "feature/extract-logic-into-package";
+				branch = "feature/add-copy-paste-button-logics";
 				kind = branch;
 			};
 		};
