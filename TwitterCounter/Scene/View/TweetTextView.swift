@@ -31,18 +31,6 @@ class TweetTextView: UITextView {
         super.awakeFromNib()
         delegate = self
     }
-    
-    override var text: String! {
-        didSet {
-            updateCharacterCounts()
-        }
-    }
-    
-    private func updateCharacterCounts() {
-        guard let text = self.text else { return }
-        characterCount = TwitterText.lengthOf(tweet: text)
-        remainingCount = 280 - characterCount
-    }
 }
 
 extension TweetTextView: UITextViewDelegate {
