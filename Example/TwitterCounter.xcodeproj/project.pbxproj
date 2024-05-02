@@ -96,9 +96,9 @@
 		41B4F77E2BE2D75800816357 /* TwitterCounter */ = {
 			isa = PBXGroup;
 			children = (
-				419FFCA22BE2DC4200992489 /* Scene */,
 				41B4F77F2BE2D75800816357 /* AppDelegate.swift */,
 				41B4F7812BE2D75800816357 /* SceneDelegate.swift */,
+				419FFCA22BE2DC4200992489 /* Scene */,
 				41B4F7852BE2D75800816357 /* Main.storyboard */,
 				41B4F7882BE2D75800816357 /* Assets.xcassets */,
 				41B4F78A2BE2D75800816357 /* LaunchScreen.storyboard */,
@@ -512,7 +512,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alielsokary/TwitterCounter.git";
 			requirement = {
-				branch = dev;
+				branch = master;
 				kind = branch;
 			};
 		};
