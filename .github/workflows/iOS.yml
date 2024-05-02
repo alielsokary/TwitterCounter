@@ -20,6 +20,12 @@ jobs:
         uses: actions/setup-swift@v2
         with:
           swift-version: '5.5'
+          
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_15.3.app
+      
+    - name: Xcode version
+      run: /usr/bin/xcodebuild -version
     
     - name: Build and test
-      run: swift test --platform ios --enable-code-coverage --destination 'platform=iOS Simulator,name=iPhone 12'
+      run: swift test
