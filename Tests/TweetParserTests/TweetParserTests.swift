@@ -25,15 +25,29 @@ final class TweetTextViewTests: XCTestCase {
     }
 
     func testClearTextResetsTextViewProperties() {
-        guard let tv = textView else {
-            XCTFail("TweetTextView instance is nil in testClearText()")
-            return
-        }
-
-        tv.clearText()
-        XCTAssertEqual(tv.text, "")
-        XCTAssertEqual(tv.tweetText, "")
-        XCTAssertEqual(tv.characterCount, 0)
-        XCTAssertEqual(tv.remainingCount, 280)
+        textView.clearText()
+        XCTAssertEqual(textView.text, "")
+        XCTAssertEqual(textView.tweetText, "")
+        XCTAssertEqual(textView.characterCount, 0)
+        XCTAssertEqual(textView.remainingCount, 280)
     }
+    
+    func testTextChangeUpdatesCharactersCount() {
+        let expectation = XCTestExpectation(description: "Character count updated")
+        let tweetText = "New text"
+        
+        let cancellable = textView.$characterCount
+            .sink { count in
+                if count > 0 {
+                    expectation.fulfill()
+                }
+            }
+
+        textView.tweetText = tweetText
+
+        wait(for: [expectation], timeout: 1.0)
+        XCTAssertEqual(textView.characterCount, 8)
+        cancellable.cancel()
+    }
+
 }
