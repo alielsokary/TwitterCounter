@@ -49,5 +49,24 @@ final class TweetTextViewTests: XCTestCase {
         XCTAssertEqual(textView.characterCount, 8)
         cancellable.cancel()
     }
+    
+    func testTextChangeUpdatesRemainingCount() {
+        let expectation = XCTestExpectation(description: "Character count updated")
+        let tweetText = "New text"
+        
+        let cancellable = textView.$characterCount
+            .dropFirst()
+            .sink { count in
+                if count > 0 {
+                    expectation.fulfill()
+                }
+            }
+
+        textView.tweetText = tweetText
+
+        wait(for: [expectation], timeout: 1.0)
+        XCTAssertEqual(textView.remainingCount, 272)
+        cancellable.cancel()
+    }
 
 }
