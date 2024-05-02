@@ -71,17 +71,26 @@
                                 <rect key="frame" x="41" y="498.99999999999994" width="100" height="38.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Copy Text"/>
+                                <connections>
+                                    <action selector="copyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPJ-GH-fNJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blY-FN-ihd">
                                 <rect key="frame" x="243" y="499" width="101" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Clear Text"/>
+                                <connections>
+                                    <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o77-dT-ZZK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTY-Vo-dbV">
                                 <rect key="frame" x="144.33333333333334" y="571" width="104.66666666666666" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Post tweet"/>
+                                <connections>
+                                    <action selector="postTweetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRW-g5-qhX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

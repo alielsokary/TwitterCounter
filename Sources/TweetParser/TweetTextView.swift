@@ -15,7 +15,7 @@ public class TweetTextView: UITextView {
     @Published public var remainingCount: Int = 280
     
     private var cancellables: Set<AnyCancellable> = []
-        
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         delegate = self
@@ -26,6 +26,12 @@ public class TweetTextView: UITextView {
                 self?.remainingCount = 280 - count
             }
             .store(in: &cancellables)
+    }
+    
+    public func clearText() {
+        tweetText = ""
+        characterCount = 0
+        remainingCount = 280
     }
 }
 
