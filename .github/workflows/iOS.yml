@@ -23,4 +23,4 @@ jobs:
       run: /usr/bin/xcodebuild -version
 
     - name: Build and test
-      run: swift test --platform ios --enable-code-coverage --destination 'platform=iOS Simulator,name=iPhone 12'
+      run: swift test --enable-test-discovery --destination 'platform=iOS Simulator,name=iPhone 12'
