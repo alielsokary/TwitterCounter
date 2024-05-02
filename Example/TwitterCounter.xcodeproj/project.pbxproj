@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		419FFCA62BE2DC8100992489 /* TwitterCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FFCA52BE2DC8100992489 /* TwitterCounterViewModel.swift */; };
 		419FFCAE2BE3212200992489 /* TweetParser in Frameworks */ = {isa = PBXBuildFile; productRef = 419FFCAD2BE3212200992489 /* TweetParser */; };
 		41B4F7802BE2D75800816357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4F77F2BE2D75800816357 /* AppDelegate.swift */; };
 		41B4F7822BE2D75800816357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4F7812BE2D75800816357 /* SceneDelegate.swift */; };
@@ -29,7 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		419FFCA52BE2DC8100992489 /* TwitterCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCounterViewModel.swift; sourceTree = "<group>"; };
 		41B4F77C2BE2D75800816357 /* TwitterCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B4F77F2BE2D75800816357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B4F7812BE2D75800816357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		419FFCA22BE2DC4200992489 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				419FFCA42BE2DC5700992489 /* View Model */,
 				419FFCA32BE2DC4E00992489 /* View */,
 			);
 			path = Scene;
@@ -76,14 +73,6 @@
 				41B4F7832BE2D75800816357 /* TwitterCounterViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		419FFCA42BE2DC5700992489 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				419FFCA52BE2DC8100992489 /* TwitterCounterViewModel.swift */,
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		41B4F7732BE2D75800816357 = {
@@ -236,7 +225,6 @@
 				41B4F7842BE2D75800816357 /* TwitterCounterViewController.swift in Sources */,
 				41B4F7802BE2D75800816357 /* AppDelegate.swift in Sources */,
 				41B4F7822BE2D75800816357 /* SceneDelegate.swift in Sources */,
-				419FFCA62BE2DC8100992489 /* TwitterCounterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +512,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alielsokary/TwitterCounter.git";
 			requirement = {
-				branch = "feature/add-copy-paste-button-logics";
+				branch = dev;
 				kind = branch;
 			};
 		};
