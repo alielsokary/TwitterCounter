@@ -18,6 +18,7 @@ class TweetTextView: UITextView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        delegate = self
         $tweetText
             .map { TwitterText.lengthOf(tweet: $0) }
             .sink { [weak self] count in
@@ -26,17 +27,12 @@ class TweetTextView: UITextView {
             }
             .store(in: &cancellables)
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        delegate = self
-    }
 }
 
 extension TweetTextView: UITextViewDelegate {
-func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-    let currentText = textView.text as NSString
-    let newText = currentText.replacingCharacters(in: range, with: text)
-    return TwitterText.lengthOf(tweet: newText) <= 280
-}
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let currentText = textView.text as NSString
+        let newText = currentText.replacingCharacters(in: range, with: text)
+        return TwitterText.lengthOf(tweet: newText) <= 280
+    }
 }
