@@ -57,7 +57,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p1M-Bs-xmi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p1M-Bs-xmi" customClass="TweetTextView" customModule="TwitterCounter" customModuleProvider="target">
                                 <rect key="frame" x="76" y="330" width="241" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -70,7 +70,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-UQ-wYp">
-                                <rect key="frame" x="41" y="499" width="100" height="39"/>
+                                <rect key="frame" x="41" y="498.99999999999994" width="100" height="38.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Copy Text"/>
                             </button>
@@ -81,7 +81,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Clear Text"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTY-Vo-dbV">
-                                <rect key="frame" x="144" y="571" width="105" height="39"/>
+                                <rect key="frame" x="144.33333333333334" y="571" width="104.66666666666666" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Post tweet"/>
                             </button>

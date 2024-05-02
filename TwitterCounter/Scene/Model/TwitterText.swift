@@ -40,14 +40,14 @@ struct TwitterText {
 
     private static func cleanAndCountURLs(text: String) -> (String, Int) {
         var output = text
-        var lenght = 0
+        var length = 0
         let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
         let matches = detector.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count))
 
         matches.forEach {
             output = (text as NSString).replacingCharacters(in: $0.range, with: "")
-            lenght += 23
+            length += 23
         }
-        return (output, lenght)
+        return (output, length)
     }
 }
