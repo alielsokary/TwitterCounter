@@ -27,6 +27,7 @@ class TwitterCounterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
         setupBindings()
     }
 }
@@ -34,6 +35,12 @@ class TwitterCounterViewController: UIViewController {
 // MARK: - Configurations
 
 private extension TwitterCounterViewController {
+    
+    func configureUI() {
+        tweetTextView.layer.cornerRadius = 12.0
+        tweetTextView.layer.borderWidth = 1.0
+        tweetTextView.layer.borderColor = UIColor(named: "border-color")?.cgColor
+    }
     
     func setupBindings() {
         tweetTextView.$characterCount

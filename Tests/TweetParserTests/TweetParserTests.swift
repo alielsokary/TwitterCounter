@@ -69,4 +69,42 @@ final class TweetTextViewTests: XCTestCase {
         cancellable.cancel()
     }
     
+    func testTextChangeWithSpecialCharacterUpdatesCountCorrectly() {
+        let expectation = XCTestExpectation(description: "Character count updated")
+        let tweetText = "℞"
+        
+        let cancellable = textView.$characterCount
+            .dropFirst()
+            .sink { count in
+                if count > 0 {
+                    expectation.fulfill()
+                }
+            }
+        
+        textView.tweetText = tweetText
+        
+        wait(for: [expectation], timeout: 1.0)
+        XCTAssertEqual(textView.characterCount, 2)
+        cancellable.cancel()
+    }
+    
+    func testTextChangeWithEmojiCharactersUpdatesCountCorrectly() {
+        let expectation = XCTestExpectation(description: "Character count updated")
+        let tweetText = "☺️☺️"
+        
+        let cancellable = textView.$characterCount
+            .dropFirst()
+            .sink { count in
+                if count > 0 {
+                    expectation.fulfill()
+                }
+            }
+        
+        textView.tweetText = tweetText
+        
+        wait(for: [expectation], timeout: 1.0)
+        XCTAssertEqual(textView.characterCount, 8)
+        cancellable.cancel()
+    }
+    
 }
