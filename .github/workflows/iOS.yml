@@ -10,11 +10,20 @@ jobs:
   build-and-test:
 
     runs-on: macos-latest
+    
+    strategy:
+      matrix:
+        swift-version: ['5.5']
 
     timeout-minutes: 15
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set up Swift
+        uses: actions/setup-swift@v2
+        with:
+          swift-version: ${{ matrix.swift-version }}
 
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_15.3.app
