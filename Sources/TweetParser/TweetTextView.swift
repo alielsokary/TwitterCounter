@@ -29,7 +29,8 @@ public class TweetTextView: UITextView {
     }
     
     public func clearText() {
-        tweetText = ""
+        text = ""
+        tweetText = text
         characterCount = 0
         remainingCount = 280
     }

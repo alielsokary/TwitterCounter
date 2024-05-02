@@ -63,8 +63,7 @@ private extension TwitterCounterViewController {
     }
     
     @IBAction func clearAction(_ sender: UIButton) {
-        
-            
+        tweetTextView.clearText()
     }
     
     @IBAction func postTweetAction(_ sender: UIButton) {
