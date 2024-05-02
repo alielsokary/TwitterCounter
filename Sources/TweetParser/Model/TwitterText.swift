@@ -12,8 +12,8 @@ struct WeightRange {
     let weight: Int
 }
 
-struct TwitterText {
-    static func lengthOf(tweet: String) -> Int {
+public struct TwitterText {
+    public static func lengthOf(tweet: String) -> Int {
         let defaultWeight = 200
         let scale = 100
         let ranges = [

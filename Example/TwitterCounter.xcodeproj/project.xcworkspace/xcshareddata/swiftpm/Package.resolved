@@ -1,0 +1,15 @@
+{
+  "originHash" : "18c965851e08eaf949389018fa6ef2a73aa702820b433da23941d1e8de41b357",
+  "pins" : [
+    {
+      "identity" : "twittercounter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alielsokary/TwitterCounter.git",
+      "state" : {
+        "branch" : "feature/extract-logic-into-package",
+        "revision" : "ad95f9fcedeb927637470a82759308db64330117"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -8,11 +8,11 @@
 import UIKit
 import Combine
 
-class TweetTextView: UITextView {
+public class TweetTextView: UITextView {
     
-    @Published var tweetText: String = ""
-    @Published var characterCount: Int = 0
-    @Published var remainingCount: Int = 280
+    @Published public var tweetText: String = ""
+    @Published public var characterCount: Int = 0
+    @Published public var remainingCount: Int = 280
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -30,7 +30,7 @@ class TweetTextView: UITextView {
 }
 
 extension TweetTextView: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let currentText = textView.text as NSString
         let newText = currentText.replacingCharacters(in: range, with: text)
         return TwitterText.lengthOf(tweet: newText) <= 280
