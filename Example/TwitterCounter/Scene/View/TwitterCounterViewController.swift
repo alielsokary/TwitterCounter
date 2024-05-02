@@ -21,7 +21,6 @@ class TwitterCounterViewController: UIViewController {
     
     @IBOutlet private(set) weak var postTweetButton: UIButton!
     
-    private var viewModel = TwitterCounterViewModel()
     private var cancellables: Set<AnyCancellable> = []
     
     // MARK: - Life Cycle

@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/alielsokary/TwitterCounter.git",
       "state" : {
-        "branch" : "feature/add-copy-paste-button-logics",
-        "revision" : "aa796c2811e37b8c5e731b01949293387e4eba98"
+        "branch" : "dev",
+        "revision" : "4e7f8f508466dded203bc3fef3707658e4e06d44"
       }
     }
   ],
