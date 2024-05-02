@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/alielsokary/TwitterCounter.git",
       "state" : {
-        "branch" : "dev",
-        "revision" : "4e7f8f508466dded203bc3fef3707658e4e06d44"
+        "branch" : "master",
+        "revision" : "57d20d9ed1b652d3da9a28001e330847a9cb1397"
       }
     }
   ],
