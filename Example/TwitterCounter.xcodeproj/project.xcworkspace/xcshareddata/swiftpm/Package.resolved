@@ -7,7 +7,7 @@
       "location" : "https://github.com/alielsokary/TwitterCounter.git",
       "state" : {
         "branch" : "feature/extract-logic-into-package",
-        "revision" : "ad95f9fcedeb927637470a82759308db64330117"
+        "revision" : "4e71b9cb4c820fdb76f86d6d195125ecbd86c2c0"
       }
     }
   ],
