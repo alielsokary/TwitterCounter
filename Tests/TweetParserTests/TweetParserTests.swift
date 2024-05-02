@@ -3,10 +3,10 @@ import Combine
 @testable import TweetParser
 
 final class TweetTextViewTests: XCTestCase {
-
+    
     var textView: TweetTextView!
     var cancellables: Set<AnyCancellable> = []
-
+    
     override func setUp() {
         super.setUp()
         let dummyCoder = NSKeyedUnarchiver(forReadingWith: Data())
@@ -17,13 +17,13 @@ final class TweetTextViewTests: XCTestCase {
         textView = tv
         textView.text = "Initial text"
     }
-
+    
     override func tearDown() {
         textView = nil
         cancellables.removeAll()
         super.tearDown()
     }
-
+    
     func testClearTextResetsTextViewProperties() {
         textView.clearText()
         XCTAssertEqual(textView.text, "")
@@ -42,9 +42,9 @@ final class TweetTextViewTests: XCTestCase {
                     expectation.fulfill()
                 }
             }
-
+        
         textView.tweetText = tweetText
-
+        
         wait(for: [expectation], timeout: 1.0)
         XCTAssertEqual(textView.characterCount, 8)
         cancellable.cancel()
@@ -61,12 +61,12 @@ final class TweetTextViewTests: XCTestCase {
                     expectation.fulfill()
                 }
             }
-
+        
         textView.tweetText = tweetText
-
+        
         wait(for: [expectation], timeout: 1.0)
         XCTAssertEqual(textView.remainingCount, 272)
         cancellable.cancel()
     }
-
+    
 }

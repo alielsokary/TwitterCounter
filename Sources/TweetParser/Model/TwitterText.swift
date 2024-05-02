@@ -22,10 +22,10 @@ public struct TwitterText {
             WeightRange(range: 8208...8223, weight: 100),
             WeightRange(range: 8242...8247, weight: 100)
         ]
-
+        
         let (cleanText, urlLength) = cleanAndCountURLs(text: tweet)
         var weightedLength = urlLength * scale
-
+        
         for char in cleanText.unicodeScalars {
             var weight = defaultWeight
             for item in ranges where item.range ~= char.value {
@@ -37,13 +37,13 @@ public struct TwitterText {
         weightedLength /= scale
         return weightedLength
     }
-
+    
     private static func cleanAndCountURLs(text: String) -> (String, Int) {
         var output = text
         var length = 0
         let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
         let matches = detector.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count))
-
+        
         matches.forEach {
             output = (text as NSString).replacingCharacters(in: $0.range, with: "")
             length += 23
