@@ -36,9 +36,9 @@ public class TweetTextView: UITextView {
 extension TweetTextView: UITextViewDelegate {
     
     public func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == placeholderText {
+//        if textView.text == placeholderText {
             textView.text = nil
-        }
+//        }
     }
     
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
