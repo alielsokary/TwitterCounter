@@ -15,9 +15,7 @@ public class TweetTextView: UITextView {
     @Published public var remainingCount: Int = 280
     
     private var cancellables: Set<AnyCancellable> = []
-    
-    private var placeholderText = "Start typing! You can enter up to 280 characters"
-    
+        
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         delegate = self
@@ -36,9 +34,7 @@ public class TweetTextView: UITextView {
 extension TweetTextView: UITextViewDelegate {
     
     public func textViewDidBeginEditing(_ textView: UITextView) {
-//        if textView.text == placeholderText {
-            textView.text = nil
-//        }
+        textView.text = nil
     }
     
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
