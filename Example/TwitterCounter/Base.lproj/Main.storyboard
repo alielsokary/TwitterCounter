@@ -30,7 +30,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DQ9-tx-cvN">
                                         <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="83.666666666666671"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqA-Uq-PMh">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvf-Ei-dui">
                                                 <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Characters Typed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bA-as-cnk">
@@ -42,9 +42,9 @@
                                                 </subviews>
                                                 <color key="backgroundColor" name="background-color"/>
                                                 <constraints>
-                                                    <constraint firstItem="3bA-as-cnk" firstAttribute="centerY" secondItem="vqA-Uq-PMh" secondAttribute="centerY" id="S5E-hF-VJc"/>
-                                                    <constraint firstAttribute="height" constant="35" id="aUy-pv-KrQ"/>
-                                                    <constraint firstItem="3bA-as-cnk" firstAttribute="centerX" secondItem="vqA-Uq-PMh" secondAttribute="centerX" id="lG1-og-j0U"/>
+                                                    <constraint firstItem="3bA-as-cnk" firstAttribute="centerY" secondItem="Jvf-Ei-dui" secondAttribute="centerY" id="0dK-1m-Qen"/>
+                                                    <constraint firstAttribute="height" constant="35" id="dEx-D9-WAZ"/>
+                                                    <constraint firstItem="3bA-as-cnk" firstAttribute="centerX" secondItem="Jvf-Ei-dui" secondAttribute="centerX" id="m9k-Ox-Cfn"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/280" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHH-aV-UCF">
@@ -54,6 +54,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Jvf-Ei-dui" firstAttribute="top" secondItem="DQ9-tx-cvN" secondAttribute="top" id="9D4-Iq-dtB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jvf-Ei-dui" secondAttribute="trailing" id="AXw-JF-r2C"/>
+                                            <constraint firstItem="Jvf-Ei-dui" firstAttribute="leading" secondItem="DQ9-tx-cvN" secondAttribute="leading" id="OlS-td-T5T"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="orh-wL-Fr9">
                                         <rect key="frame" x="190.66666666666663" y="0.0" width="170.33333333333337" height="83.666666666666671"/>
@@ -82,6 +87,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Sak-I5-VtE" firstAttribute="leading" secondItem="orh-wL-Fr9" secondAttribute="leading" id="Gsf-6F-7Rk"/>
+                                            <constraint firstItem="Sak-I5-VtE" firstAttribute="top" secondItem="orh-wL-Fr9" secondAttribute="top" id="IxU-Ut-2oC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sak-I5-VtE" secondAttribute="trailing" id="bWI-9e-hiy"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
